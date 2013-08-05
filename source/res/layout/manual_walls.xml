@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsA"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_2" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_3" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsB"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_5" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsC"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_7" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_8" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsD"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_c" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_10" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_11" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_12" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_13" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_14" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_15" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_16" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_17" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_18" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_19" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsE"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_21" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsF"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_d" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsG"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_e" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_24" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsH"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_26" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsI"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_28" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_29" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualWallsJ"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_31" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_32" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_walls_33" />
+    </LinearLayout>
+
+</ScrollView>

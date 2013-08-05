@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sections">
+        <item>Manual</item>
+        <item>Terreno</item>
+        <item>Pilotes</item>
+        <item>Piso</item>
+        <item>Paredes</item>
+        <item>Techo</item>
+        <item>Puerta y ventanas</item>
+    </string-array>
+    
+    <string-array name="techo">
+        <item>Historia</item>
+        <item>Misión – Visión</item>
+        <item>Modelo de intervención</item>
+        <item>Países</item>
+        <item>Preguntas frecuentes</item>
+        <item>Qué es TECHO</item>
+        <item>Valores</item>
+    </string-array>
+    
+    <string-array name="press">
+        <item>Comunicados de prensa</item>
+        <item>Actividades TECHO</item>
+    </string-array>
+</resources>

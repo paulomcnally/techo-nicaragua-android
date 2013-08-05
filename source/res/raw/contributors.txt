@@ -1,0 +1,19 @@
+<li><b>Lider de proyecto</b></li>
+<p>Matías Miguens<br>
+matias.miguens@techo.org<br>
+@macusmiguens</p>
+
+<li><b>Desarrollo Android</b></li>
+<p>Paulo McNally<br>
+paulo.mcnally@techo.org<br>
+@paulomcnally</p>
+
+<li><b>Desarrollo iOS</b></li>
+<p>Sheila Slick<br>
+slickdevelopers.com@gmail.com<br>
+@slickdevelopers</p>
+
+<li><b>Manuales de construcción</b></li>
+<p>Walter Castillo Vega<br>
+walter.castillo@techo.org<br>
+@Wcastillovega</p>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.techo.nicaragua"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <supports-screens
+        android:largeScreens="false"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="false" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.techo.nicaragua.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Techo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.manual.ManualActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.techo.TechoActivity"
+            android:label="@string/title_activity_techo"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.press.PressActivity"
+            android:label="@string/title_activity_press"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.socialnetworks.SocialNetworksActivity"
+            android:label="@string/title_social_networks"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.settings.SettingsActivity"
+            android:label="@string/title_settings"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.contact.ContactActivity"
+            android:label="@string/title_contact"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+        <activity
+            android:name="com.techo.nicaragua.ArticleActivity"
+            android:label="@string/title_activity_article"
+            android:theme="@style/Theme.Techo" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+</manifest>

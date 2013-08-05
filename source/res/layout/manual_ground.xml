@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutGroundMaster"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/TextViewCustomA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_1" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualGroundA"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_c" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutImportant"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/TextViewCustomA"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manual_ground_3" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_4" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_5" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_6" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_7" />
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_8" />
+
+        <CheckBox
+            android:id="@+id/chk0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_0"
+            android:tag="chk0" />
+        
+        <CheckBox
+            android:id="@+id/chk1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_1"
+            android:tag="chk1" />
+        
+        <CheckBox
+            android:id="@+id/chk2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_2"
+            android:tag="chk2" />
+        
+        <CheckBox
+            android:id="@+id/chk3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_3"
+            android:tag="chk3" />
+        
+        <CheckBox
+            android:id="@+id/chk4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_4"
+            android:tag="chk4" />
+        
+        <CheckBox
+            android:id="@+id/chk5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_5"
+            android:tag="chk5" />
+        
+        <CheckBox
+            android:id="@+id/chk6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_6"
+            android:tag="chk6" />
+        
+        <CheckBox
+            android:id="@+id/chk7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_7"
+            android:tag="chk7" />
+        
+        <CheckBox
+            android:id="@+id/chk8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_8"
+            android:tag="chk8" />
+        
+        <CheckBox
+            android:id="@+id/chk9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_9"
+            android:tag="chk9" />
+        
+        <CheckBox
+            android:id="@+id/chk10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_10"
+            android:tag="chk10" />
+        
+        <CheckBox
+            android:id="@+id/chk11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_11"
+            android:tag="chk11" />
+        
+        <CheckBox
+            android:id="@+id/chk12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_12"
+            android:tag="chk12" />
+        
+        <CheckBox
+            android:id="@+id/chk13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_13"
+            android:tag="chk13" />
+        
+        <CheckBox
+            android:id="@+id/chk14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_14"
+            android:tag="chk14" />
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_9" />
+        
+        <CheckBox
+            android:id="@+id/chk15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_15"
+            android:tag="chk15" />
+        
+        <CheckBox
+            android:id="@+id/chk16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_16"
+            android:tag="chk16" />
+        
+        <CheckBox
+            android:id="@+id/chk17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_17"
+            android:tag="chk17" />
+        
+        <CheckBox
+            android:id="@+id/chk18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_18"
+            android:tag="chk18" />
+        
+        <CheckBox
+            android:id="@+id/chk19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_19"
+            android:tag="chk19" />
+        
+        <CheckBox
+            android:id="@+id/chk20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_20"
+            android:tag="chk20" />
+        
+        <CheckBox
+            android:id="@+id/chk21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_21"
+            android:tag="chk21" />
+        
+        <CheckBox
+            android:id="@+id/chk22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_22"
+            android:tag="chk22" />
+        
+        <CheckBox
+            android:id="@+id/chk23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_23"
+            android:tag="chk23" />
+        
+        <CheckBox
+            android:id="@+id/chk24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_24"
+            android:tag="chk24" />
+        
+        <CheckBox
+            android:id="@+id/chk25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_25"
+            android:tag="chk25" />
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_10" />
+        
+        <CheckBox
+            android:id="@+id/chk26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_26"
+            android:tag="chk26" />
+        
+        <CheckBox
+            android:id="@+id/chk27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_27"
+            android:tag="chk27" />
+        
+        <CheckBox
+            android:id="@+id/chk28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_28"
+            android:tag="chk28" />
+        
+        <CheckBox
+            android:id="@+id/chk29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_29"
+            android:tag="chk29" />
+        
+        <CheckBox
+            android:id="@+id/chk30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_30"
+            android:tag="chk30" />
+        
+        <CheckBox
+            android:id="@+id/chk31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_31"
+            android:tag="chk31" />
+        
+        <CheckBox
+            android:id="@+id/chk32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_32"
+            android:tag="chk32" />
+        
+        <CheckBox
+            android:id="@+id/chk33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_33"
+            android:tag="chk33" />
+        
+        <CheckBox
+            android:id="@+id/chk34"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_34"
+            android:tag="chk34" />
+        
+        <CheckBox
+            android:id="@+id/chk35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_chk_35"
+            android:tag="chk35" />
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_11" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_12" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualGroundB"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_14" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualGroundC"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_16" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_17" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualGroundD"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_19" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_20" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualGroundE"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_22" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_ground_23" />
+        
+        
+    </LinearLayout>
+
+</ScrollView>

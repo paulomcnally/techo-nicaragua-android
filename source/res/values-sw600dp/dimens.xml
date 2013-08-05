@@ -1,0 +1,11 @@
+<resources>
+    <!--
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    -->
+    <dimen name="manual_image_height">500dp</dimen>
+    <dimen name="manual_image_height_a">75dp</dimen>
+    <dimen name="manual_image_height_b">180dp</dimen>
+    <dimen name="manual_image_height_c">215dp</dimen>
+    <dimen name="article_image_height">150dp</dimen>
+</resources>

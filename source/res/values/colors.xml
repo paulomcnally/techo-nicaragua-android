@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_a">#1f6fb4</color>
+    <color name="important_background">#dadadb</color>
+    <color name="text_c">#2e2e2d</color>
+    <color name="image_border">#cccccc</color>
+    <color name="white">#ffffff</color>
+    <color name="techo_text">#07adec</color>
+    <color name="abs_background">#f2f2f2</color>
+    <color name="article_border">#e7e7e7</color>
+    <color name="article_title">#b4b5b4</color>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_1" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualDoorWindowsA"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_3" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualDoorWindowsB"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_5" />
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_6" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_7" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualDoorWindowsC"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualDoorWindowsD"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_10" />
+        
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_11" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_12" />
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_13" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualDoorWindowsE"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_door_and_windows_15" />
+        
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualDoorWindowsF"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

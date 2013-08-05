@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_1" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualPilotesA"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_3" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_4" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_5" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_6" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_7" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_8" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_9" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_10" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_11" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_12" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualPilotesB"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_a" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_14" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualPilotesC"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_a" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_16" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualPilotesD"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_a" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_18" />
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_19" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_20" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualPilotesE"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_22" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_23" />
+
+        <LinearLayout
+            style="@style/LinearLayoutThumbnails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                style="@style/LinearLayoutThumbnailsWrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/imageViewManualPilotesF"
+                    style="@style/ImageViewCustom"
+                    android:layout_height="@dimen/manual_image_height_a" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewCustomB"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_25" />
+
+        <TextView
+            style="@style/TextViewCustomC"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_pilotes_26" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pagerPilotes"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/manual_image_height" >
+        </android.support.v4.view.ViewPager>
+
+        <com.viewpagerindicator.LinePageIndicator
+            android:id="@+id/indicatorPilotes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dip" />
+    </LinearLayout>
+
+</ScrollView>

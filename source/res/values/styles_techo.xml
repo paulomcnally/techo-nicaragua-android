@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File created by the Android Action Bar Style Generator
+
+     Copyright (C) 2011 The Android Open Source Project
+     Copyright (C) 2012 readyState Software Ltd
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+
+    <style name="Theme.Techo" parent="@style/Theme.Sherlock.Light">
+        <item name="actionBarItemBackground">@drawable/selectable_background_techo</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Techo</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Techo</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Techo</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Techo</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Techo</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_techo</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_techo</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Techo</item>
+        <item name="actionBarWidgetTheme">@style/MenuStyle</item>
+		<item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+    </style>
+    
+    <style name="MenuStyle" parent="Widget">
+    	<item name="android:textColor">@color/techo_text</item>
+	</style>
+
+    <style name="ActionBar.Solid.Techo" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">
+        <item name="background">@drawable/ab_solid_techo</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_techo</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_techo</item>
+        <item name="progressBarStyle">@style/ProgressBar.Techo</item>
+        <item name="titleTextStyle">@style/TitleText</item>
+    </style>
+    
+    <!-- Paulo McNally Added -->
+    <style name="TitleText" >
+        <item name="android:textColor">@color/techo_text</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    
+    <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/techo_text</item>
+    </style>
+    <!-- Paulo McNally Added / end -->
+
+    <style name="ActionBar.Transparent.Techo" parent="@style/Widget.Sherlock.Light.ActionBar">
+        <item name="background">@drawable/ab_transparent_techo</item>
+        <item name="progressBarStyle">@style/ProgressBar.Techo</item>
+    </style>
+	
+    <style name="PopupMenu.Techo" parent="@style/Widget.Sherlock.Light.ListPopupWindow">	
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_techo</item>
+    </style>
+	
+    <style name="DropDownListView.Techo" parent="@style/Widget.Sherlock.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_techo</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Techo" parent="@style/Widget.Sherlock.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_techo</item>
+    </style>
+	
+    <style name="DropDownNav.Techo" parent="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_techo</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_techo</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_techo</item>
+    </style>
+    
+    <style name="ProgressBar.Techo" parent="@style/Widget.Sherlock.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_techo</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Techo" parent="@style/Widget.Sherlock.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_techo</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Techo.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Techo</item>
+        <!-- <item name="dropDownListViewStyle">@style/DropDownListView.Techo</item> -->
+    </style>
+
+</resources>

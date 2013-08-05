@@ -1,0 +1,65 @@
+<resources>
+
+    <style name="TextViewCustomA" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_a</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    
+    <style name="TextViewCustomB" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_a</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    
+    <style name="TextViewCustomC" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_c</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    
+    <style name="LinearLayoutThumbnails">     
+    	<item name="android:layout_width">fill_parent</item>     
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:padding">1dp</item>
+    	<item name="android:layout_marginBottom">10dp</item>
+    	<item name="android:orientation">vertical</item>
+    	<item name="android:background">@color/image_border</item>    
+	</style>
+	
+	<style name="LinearLayoutThumbnailsWrapper">     
+    	<item name="android:layout_width">fill_parent</item>     
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:orientation">vertical</item>
+    	<item name="android:background">@color/white</item>    
+	</style>
+	
+	<style name="LinearLayoutImportant">     
+    	<item name="android:layout_width">wrap_content</item>     
+    	<item name="android:layout_height">wrap_content</item>
+    	<item name="android:background">@color/important_background</item>
+    	<item name="android:padding">10dp</item>
+    	<item name="android:layout_marginBottom">10dp</item>
+    	<item name="android:orientation">vertical</item>    
+	</style> 
+    
+    <style name="ImageViewCustom">     
+    	<item name="android:layout_width">wrap_content</item>     
+    	<item name="android:layout_height">@dimen/manual_image_height</item>
+    	<item name="android:layout_margin">3dp</item>    
+	</style>
+	
+	<style name="ViewSeparator">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/article_border</item>
+    </style>
+
+</resources>
