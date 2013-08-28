@@ -24,6 +24,8 @@ Libraries
 
 [android-support-v4.jar](http://developer.android.com/tools/support-library/index.html)
 
+[android-query.0.25.10.jar](https://code.google.com/p/android-query/)
+
 
 Developed By
 ============
