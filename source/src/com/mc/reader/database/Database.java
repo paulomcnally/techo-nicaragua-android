@@ -140,10 +140,10 @@ public class Database extends Activity {
 		connect(DB_READ);
 		String query;
 		if (type.equals("")) {
-			query = "SELECT * FROM tblArticles ORDER BY article_registered DESC LIMIT 20";
+			query = "SELECT * FROM tblArticles ORDER BY article_registered DESC LIMIT 5";
 		} else {
 			query = "SELECT * FROM tblArticles WHERE article_type = '"
-					+ type + "' ORDER BY article_registered DESC LIMIT 20";
+					+ type + "' ORDER BY article_registered DESC LIMIT 5";
 		}
 		Cursor cursor = sqlite.rawQuery(query, null);
 		startManagingCursor(cursor);

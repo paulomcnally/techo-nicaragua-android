@@ -21,19 +21,6 @@
             android:layout_height="wrap_content"
             android:text="@string/manual_manual_2" />
         
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pagerManual"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/manual_image_height" >
-        </android.support.v4.view.ViewPager>
-
-        <com.viewpagerindicator.LinePageIndicator
-            android:id="@+id/indicatorManual"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dip" />
-
-        
         
     </LinearLayout>
 

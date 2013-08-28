@@ -1,25 +1,24 @@
 package com.techo.nicaragua.manual;
 
+import java.io.File;
+
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.view.ViewPager;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.actionbarsherlock.app.SherlockFragment;
+import com.androidquery.AQuery;
+import com.androidquery.util.AQUtility;
 import com.mc.reader.Util;
 import com.mc.reader.database.Database;
-import com.mc.reader.images.ImageCache;
-import com.mc.reader.images.ImageCache.ImageCacheParams;
-import com.mc.reader.images.ImageFetcher;
 import com.techo.nicaragua.R;
 import com.viewpagerindicator.LinePageIndicator;
 
@@ -41,8 +40,6 @@ public class ManualFragment extends SherlockFragment {
 	private static final int WALLS = 4;
 	private static final int ROOF = 5;
 	private static final int DOOR_AND_WINDOWS = 6;
-
-	private ImageFetcher mImageFetcher;
 
 	/**
 	 * Create a new instance of CountingFragment, providing "num" as an
@@ -66,48 +63,19 @@ public class ManualFragment extends SherlockFragment {
 		util = new Util(getActivity(), database);
 	}
 
-	private void initImages() {
-		// Fetch screen height and width, to use as our max size when loading
-		// images as this
-		// activity runs full screen
-		final DisplayMetrics displayMetrics = new DisplayMetrics();
-		getActivity().getWindowManager().getDefaultDisplay()
-				.getMetrics(displayMetrics);
-		final int height = displayMetrics.heightPixels;
-		final int width = displayMetrics.widthPixels;
-
-		// For this sample we'll use half of the longest width to resize our
-		// images. As the
-		// image scaling ensures the image is larger than this, we should be
-		// left with a
-		// resolution that is appropriate for both portrait and landscape. For
-		// best image quality
-		// we shouldn't divide by 2, but this will use more memory and require a
-		// larger memory
-		// cache.
-		final int longest = (height > width ? height : width) / 2;
-
-		ImageCacheParams cacheParams = new ImageCache.ImageCacheParams(
-				getActivity(), Util.IMAGE_CACHE_DIR);
-		cacheParams.setMemCacheSizePercent(0.25f); // Set memory cache to 25% of
-													// app memory
-
-		// The ImageFetcher takes care of loading images into our ImageView
-		// children asynchronously
-		mImageFetcher = new ImageFetcher(getActivity(), longest);
-		mImageFetcher.addImageCache(getActivity().getSupportFragmentManager(),
-				cacheParams);
-		mImageFetcher.setImageFadeIn(false);
-	}
-
 	/**
 	 * When creating, retrieve this instance's number from its arguments.
 	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		File ext = Environment.getExternalStorageDirectory();
+		File cacheDir = new File(ext, "Android/data/" + getActivity().getPackageName());
+		AQUtility.setCacheDir(cacheDir);
 		initClass();
-		initImages();
+		
+		
 		mNum = getArguments() != null ? getArguments().getInt("num") : 1;
 	}
 
@@ -121,65 +89,30 @@ public class ManualFragment extends SherlockFragment {
 		switch (mNum) {
 		case MANUAL:
 			v = inflater.inflate(R.layout.manual_manual, container, false);
-			
-			// Pagination image view
-						String[] urls_manuals = new String[6];
-						urls_manuals[0] = getString(R.string.manual_manual_im_1);
-						urls_manuals[1] = getString(R.string.manual_manual_im_2);
-						urls_manuals[2] = getString(R.string.manual_manual_im_3);
-						urls_manuals[3] = getString(R.string.manual_manual_im_4);
-						urls_manuals[4] = getString(R.string.manual_manual_im_5);
-						urls_manuals[5] = getString(R.string.manual_manual_im_6);
-
-						mAdapter = new ImageViewAdapter(getActivity()
-								.getSupportFragmentManager());
-						mAdapter.setCount(6);
-						mAdapter.setUrls(urls_manuals);
-						mPager = (ViewPager) v.findViewById(R.id.pagerManual);
-						mPager.setAdapter(mAdapter);
-						mPager.setOnTouchListener(new View.OnTouchListener() {
-
-							@Override
-							public boolean onTouch(View v, MotionEvent event) {
-								mPager.getParent().requestDisallowInterceptTouchEvent(true);
-								return false;
-							}
-						});
-
-						mIndicator = (LinePageIndicator) v
-								.findViewById(R.id.indicatorManual);
-						mIndicator.setViewPager(mPager);
-			
-			
-			
 			break;
 		case GROUND:
 			v = inflater.inflate(R.layout.manual_ground, container, false);
 			// ImageView load image
-			ImageView manual_ground_a = (ImageView) v
-					.findViewById(R.id.imageViewManualGroundA);
-			mImageFetcher.loadImage(getString(R.string.manual_ground_2),
-					manual_ground_a);
 
-			ImageView manual_ground_b = (ImageView) v
-					.findViewById(R.id.imageViewManualGroundB);
-			mImageFetcher.loadImage(getString(R.string.manual_ground_13),
-					manual_ground_b);
+			AQuery aq_ground_a = new AQuery(v);
+			aq_ground_a.id(R.id.imageViewManualGroundA).image(
+					getString(R.string.manual_ground_2));
 
-			ImageView manual_ground_c = (ImageView) v
-					.findViewById(R.id.imageViewManualGroundC);
-			mImageFetcher.loadImage(getString(R.string.manual_ground_15),
-					manual_ground_c);
+			AQuery aq_ground_b = new AQuery(v);
+			aq_ground_b.id(R.id.imageViewManualGroundB).image(
+					getString(R.string.manual_ground_13));
 
-			ImageView manual_ground_d = (ImageView) v
-					.findViewById(R.id.imageViewManualGroundD);
-			mImageFetcher.loadImage(getString(R.string.manual_ground_18),
-					manual_ground_d);
+			AQuery aq_ground_c = new AQuery(v);
+			aq_ground_c.id(R.id.imageViewManualGroundC).image(
+					getString(R.string.manual_ground_15));
 
-			ImageView manual_ground_e = (ImageView) v
-					.findViewById(R.id.imageViewManualGroundE);
-			mImageFetcher.loadImage(getString(R.string.manual_ground_21),
-					manual_ground_e);
+			AQuery aq_ground_d = new AQuery(v);
+			aq_ground_d.id(R.id.imageViewManualGroundD).image(
+					getString(R.string.manual_ground_18));
+
+			AQuery aq_ground_e = new AQuery(v);
+			aq_ground_e.id(R.id.imageViewManualGroundE).image(
+					getString(R.string.manual_ground_21));
 
 			// CheckBox actions
 			LinearLayout linearLayoutGroundMaster = (LinearLayout) v
@@ -224,35 +157,29 @@ public class ManualFragment extends SherlockFragment {
 		case PILOTES:
 			v = inflater.inflate(R.layout.manual_pilotes, container, false);
 
-			ImageView manual_pilotes_a = (ImageView) v
-					.findViewById(R.id.imageViewManualPilotesA);
-			mImageFetcher.loadImage(getString(R.string.manual_pilotes_2),
-					manual_pilotes_a);
+			AQuery aq_pilote_a = new AQuery(v);
+			aq_pilote_a.id(R.id.imageViewManualPilotesA).image(
+					getString(R.string.manual_pilotes_2));
 
-			ImageView manual_pilotes_b = (ImageView) v
-					.findViewById(R.id.imageViewManualPilotesB);
-			mImageFetcher.loadImage(getString(R.string.manual_pilotes_13),
-					manual_pilotes_b);
+			AQuery aq_pilote_b = new AQuery(v);
+			aq_pilote_b.id(R.id.imageViewManualPilotesB).image(
+					getString(R.string.manual_pilotes_13));
 
-			ImageView manual_pilotes_c = (ImageView) v
-					.findViewById(R.id.imageViewManualPilotesC);
-			mImageFetcher.loadImage(getString(R.string.manual_pilotes_15),
-					manual_pilotes_c);
+			AQuery aq_pilote_c = new AQuery(v);
+			aq_pilote_c.id(R.id.imageViewManualPilotesC).image(
+					getString(R.string.manual_pilotes_15));
 
-			ImageView manual_pilotes_d = (ImageView) v
-					.findViewById(R.id.imageViewManualPilotesD);
-			mImageFetcher.loadImage(getString(R.string.manual_pilotes_17),
-					manual_pilotes_d);
+			AQuery aq_pilote_d = new AQuery(v);
+			aq_pilote_d.id(R.id.imageViewManualPilotesD).image(
+					getString(R.string.manual_pilotes_17));
 
-			ImageView manual_pilotes_e = (ImageView) v
-					.findViewById(R.id.imageViewManualPilotesE);
-			mImageFetcher.loadImage(getString(R.string.manual_pilotes_21),
-					manual_pilotes_e);
+			AQuery aq_pilote_e = new AQuery(v);
+			aq_pilote_e.id(R.id.imageViewManualPilotesE).image(
+					getString(R.string.manual_pilotes_21));
 
-			ImageView manual_pilotes_f = (ImageView) v
-					.findViewById(R.id.imageViewManualPilotesF);
-			mImageFetcher.loadImage(getString(R.string.manual_pilotes_24),
-					manual_pilotes_f);
+			AQuery aq_pilote_f = new AQuery(v);
+			aq_pilote_f.id(R.id.imageViewManualPilotesF).image(
+					getString(R.string.manual_pilotes_24));
 
 			// Pagination image view
 			String[] urls_pilotes = new String[5];
@@ -287,205 +214,168 @@ public class ManualFragment extends SherlockFragment {
 			v = inflater.inflate(R.layout.manual_floor, container, false);
 
 			// ImageView load image
-			ImageView manual_floor_a = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorA);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_3),
-					manual_floor_a);
+			AQuery aq_floor_a = new AQuery(v);
+			aq_floor_a.id(R.id.imageViewManualFloorA).image(
+					getString(R.string.manual_floor_3));
 
-			ImageView manual_floor_b = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorB);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_5),
-					manual_floor_b);
+			AQuery aq_floor_b = new AQuery(v);
+			aq_floor_b.id(R.id.imageViewManualFloorB).image(
+					getString(R.string.manual_floor_5));
 
-			ImageView manual_floor_c = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorC);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_8),
-					manual_floor_c);
+			AQuery aq_floor_c = new AQuery(v);
+			aq_floor_c.id(R.id.imageViewManualFloorC).image(
+					getString(R.string.manual_floor_8));
 
-			ImageView manual_floor_d = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorD);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_12),
-					manual_floor_d);
+			AQuery aq_floor_d = new AQuery(v);
+			aq_floor_d.id(R.id.imageViewManualFloorD).image(
+					getString(R.string.manual_floor_12));
 
-			ImageView manual_floor_e = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorE);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_14),
-					manual_floor_e);
+			AQuery aq_floor_e = new AQuery(v);
+			aq_floor_e.id(R.id.imageViewManualFloorE).image(
+					getString(R.string.manual_floor_14));
 
-			ImageView manual_floor_f = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorF);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_16),
-					manual_floor_f);
+			AQuery aq_floor_f = new AQuery(v);
+			aq_floor_f.id(R.id.imageViewManualFloorF).image(
+					getString(R.string.manual_floor_16));
 
-			ImageView manual_floor_g = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorG);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_19),
-					manual_floor_g);
+			AQuery aq_floor_g = new AQuery(v);
+			aq_floor_g.id(R.id.imageViewManualFloorG).image(
+					getString(R.string.manual_floor_19));
 
-			ImageView manual_floor_h = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorH);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_21),
-					manual_floor_h);
+			AQuery aq_floor_h = new AQuery(v);
+			aq_floor_h.id(R.id.imageViewManualFloorH).image(
+					getString(R.string.manual_floor_21));
 
-			ImageView manual_floor_i = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorI);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_22),
-					manual_floor_i);
+			AQuery aq_floor_i = new AQuery(v);
+			aq_floor_i.id(R.id.imageViewManualFloorI).image(
+					getString(R.string.manual_floor_22));
 
-			ImageView manual_floor_j = (ImageView) v
-					.findViewById(R.id.imageViewManualFloorJ);
-			mImageFetcher.loadImage(getString(R.string.manual_floor_25),
-					manual_floor_j);
+			AQuery aq_floor_j = new AQuery(v);
+			aq_floor_j.id(R.id.imageViewManualFloorJ).image(
+					getString(R.string.manual_floor_25));
 
 			break;
 		case WALLS:
 			v = inflater.inflate(R.layout.manual_walls, container, false);
 
 			// ImageView load image
-			ImageView manual_walls_a = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsA);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_1),
-					manual_walls_a);
 
-			ImageView manual_walls_b = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsB);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_4),
-					manual_walls_b);
+			AQuery aq_walls_a = new AQuery(v);
+			aq_walls_a.id(R.id.imageViewManualWallsA).image(
+					getString(R.string.manual_walls_1));
 
-			ImageView manual_walls_c = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsC);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_6),
-					manual_walls_c);
+			AQuery aq_walls_b = new AQuery(v);
+			aq_walls_b.id(R.id.imageViewManualWallsB).image(
+					getString(R.string.manual_walls_4));
 
-			ImageView manual_walls_d = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsD);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_9),
-					manual_walls_d);
+			AQuery aq_walls_c = new AQuery(v);
+			aq_walls_c.id(R.id.imageViewManualWallsC).image(
+					getString(R.string.manual_walls_6));
 
-			ImageView manual_walls_e = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsE);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_20),
-					manual_walls_e);
+			AQuery aq_walls_d = new AQuery(v);
+			aq_walls_d.id(R.id.imageViewManualWallsD).image(
+					getString(R.string.manual_walls_9));
 
-			ImageView manual_walls_f = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsF);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_22),
-					manual_walls_f);
+			AQuery aq_walls_e = new AQuery(v);
+			aq_walls_e.id(R.id.imageViewManualWallsE).image(
+					getString(R.string.manual_walls_20));
 
-			ImageView manual_walls_g = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsG);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_23),
-					manual_walls_g);
+			AQuery aq_walls_f = new AQuery(v);
+			aq_walls_f.id(R.id.imageViewManualWallsF).image(
+					getString(R.string.manual_walls_22));
 
-			ImageView manual_walls_h = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsH);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_25),
-					manual_walls_h);
+			AQuery aq_walls_g = new AQuery(v);
+			aq_walls_g.id(R.id.imageViewManualWallsG).image(
+					getString(R.string.manual_walls_23));
 
-			ImageView manual_walls_i = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsI);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_27),
-					manual_walls_i);
+			AQuery aq_walls_h = new AQuery(v);
+			aq_walls_h.id(R.id.imageViewManualWallsH).image(
+					getString(R.string.manual_walls_25));
 
-			ImageView manual_walls_j = (ImageView) v
-					.findViewById(R.id.imageViewManualWallsJ);
-			mImageFetcher.loadImage(getString(R.string.manual_walls_30),
-					manual_walls_j);
+			AQuery aq_walls_i = new AQuery(v);
+			aq_walls_i.id(R.id.imageViewManualWallsI).image(
+					getString(R.string.manual_walls_27));
+
+			AQuery aq_walls_j = new AQuery(v);
+			aq_walls_j.id(R.id.imageViewManualWallsJ).image(
+					getString(R.string.manual_walls_30));
 
 			break;
 		case ROOF:
 			v = inflater.inflate(R.layout.manual_roof, container, false);
 
 			// ImageView load image
-			ImageView manual_roof_a = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofA);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_4),
-					manual_roof_a);
+			AQuery aq_roof_a = new AQuery(v);
+			aq_roof_a.id(R.id.imageViewManualRoofA).image(
+					getString(R.string.manual_roof_4));
 
-			ImageView manual_roof_b = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofB);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_6),
-					manual_roof_b);
+			AQuery aq_roof_b = new AQuery(v);
+			aq_roof_b.id(R.id.imageViewManualRoofB).image(
+					getString(R.string.manual_roof_6));
 
-			ImageView manual_roof_c = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofC);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_8),
-					manual_roof_c);
+			AQuery aq_roof_c = new AQuery(v);
+			aq_roof_c.id(R.id.imageViewManualRoofC).image(
+					getString(R.string.manual_roof_8));
 
-			ImageView manual_roof_d = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofD);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_11),
-					manual_roof_d);
+			AQuery aq_roof_d = new AQuery(v);
+			aq_roof_d.id(R.id.imageViewManualRoofD).image(
+					getString(R.string.manual_roof_11));
 
-			ImageView manual_roof_e = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofE);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_12),
-					manual_roof_e);
+			AQuery aq_roof_e = new AQuery(v);
+			aq_roof_e.id(R.id.imageViewManualRoofE).image(
+					getString(R.string.manual_roof_12));
 
-			ImageView manual_roof_f = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofF);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_13),
-					manual_roof_f);
+			AQuery aq_roof_f = new AQuery(v);
+			aq_roof_f.id(R.id.imageViewManualRoofF).image(
+					getString(R.string.manual_roof_13));
 
-			ImageView manual_roof_g = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofG);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_15),
-					manual_roof_g);
+			AQuery aq_roof_g = new AQuery(v);
+			aq_roof_g.id(R.id.imageViewManualRoofG).image(
+					getString(R.string.manual_roof_15));
 
-			ImageView manual_roof_h = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofH);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_16),
-					manual_roof_h);
+			AQuery aq_roof_h = new AQuery(v);
+			aq_roof_h.id(R.id.imageViewManualRoofH).image(
+					getString(R.string.manual_roof_16));
 
-			ImageView manual_roof_i = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofI);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_18),
-					manual_roof_i);
+			AQuery aq_roof_i = new AQuery(v);
+			aq_roof_i.id(R.id.imageViewManualRoofI).image(
+					getString(R.string.manual_roof_18));
 
-			ImageView manual_roof_j = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofJ);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_19),
-					manual_roof_j);
+			AQuery aq_roof_j = new AQuery(v);
+			aq_roof_j.id(R.id.imageViewManualRoofJ).image(
+					getString(R.string.manual_roof_19));
 
-			ImageView manual_roof_k = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofK);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_21),
-					manual_roof_k);
+			AQuery aq_roof_k = new AQuery(v);
+			aq_roof_k.id(R.id.imageViewManualRoofK).image(
+					getString(R.string.manual_roof_21));
 
-			ImageView manual_roof_l = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofL);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_23),
-					manual_roof_l);
+			AQuery aq_roof_l = new AQuery(v);
+			aq_roof_l.id(R.id.imageViewManualRoofL).image(
+					getString(R.string.manual_roof_23));
 
-			ImageView manual_roof_m = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofM);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_25),
-					manual_roof_m);
+			AQuery aq_roof_m = new AQuery(v);
+			aq_roof_m.id(R.id.imageViewManualRoofM).image(
+					getString(R.string.manual_roof_25));
 
-			ImageView manual_roof_n = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofN);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_26),
-					manual_roof_n);
+			AQuery aq_roof_n = new AQuery(v);
+			aq_roof_n.id(R.id.imageViewManualRoofN).image(
+					getString(R.string.manual_roof_26));
 
-			ImageView manual_roof_o = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofO);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_27),
-					manual_roof_o);
+			AQuery aq_roof_o = new AQuery(v);
+			aq_roof_o.id(R.id.imageViewManualRoofO).image(
+					getString(R.string.manual_roof_27));
 
-			ImageView manual_roof_p = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofP);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_28),
-					manual_roof_p);
+			AQuery aq_roof_p = new AQuery(v);
+			aq_roof_p.id(R.id.imageViewManualRoofP).image(
+					getString(R.string.manual_roof_28));
 
-			ImageView manual_roof_q = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofQ);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_30),
-					manual_roof_q);
+			AQuery aq_roof_q = new AQuery(v);
+			aq_roof_q.id(R.id.imageViewManualRoofQ).image(
+					getString(R.string.manual_roof_30));
 
-			ImageView manual_roof_r = (ImageView) v
-					.findViewById(R.id.imageViewManualRoofR);
-			mImageFetcher.loadImage(getString(R.string.manual_roof_31),
-					manual_roof_r);
+			AQuery aq_roof_r = new AQuery(v);
+			aq_roof_r.id(R.id.imageViewManualRoofR).image(
+					getString(R.string.manual_roof_31));
 
 			break;
 		case DOOR_AND_WINDOWS:
@@ -493,41 +383,29 @@ public class ManualFragment extends SherlockFragment {
 					false);
 
 			// ImageView load image
-			ImageView manual_door_windows_a = (ImageView) v
-					.findViewById(R.id.imageViewManualDoorWindowsA);
-			mImageFetcher.loadImage(
-					getString(R.string.manual_door_and_windows_2),
-					manual_door_windows_a);
+			AQuery aq_daw_a = new AQuery(v);
+			aq_daw_a.id(R.id.imageViewManualDoorWindowsA).image(
+					getString(R.string.manual_door_and_windows_2));
 
-			ImageView manual_door_windows_b = (ImageView) v
-					.findViewById(R.id.imageViewManualDoorWindowsB);
-			mImageFetcher.loadImage(
-					getString(R.string.manual_door_and_windows_4),
-					manual_door_windows_b);
-			
-			ImageView manual_door_windows_c = (ImageView) v
-					.findViewById(R.id.imageViewManualDoorWindowsC);
-			mImageFetcher.loadImage(
-					getString(R.string.manual_door_and_windows_8),
-					manual_door_windows_c);
-			
-			ImageView manual_door_windows_d = (ImageView) v
-					.findViewById(R.id.imageViewManualDoorWindowsD);
-			mImageFetcher.loadImage(
-					getString(R.string.manual_door_and_windows_9),
-					manual_door_windows_d);
-			
-			ImageView manual_door_windows_e = (ImageView) v
-					.findViewById(R.id.imageViewManualDoorWindowsE);
-			mImageFetcher.loadImage(
-					getString(R.string.manual_door_and_windows_14),
-					manual_door_windows_e);
-			
-			ImageView manual_door_windows_f = (ImageView) v
-					.findViewById(R.id.imageViewManualDoorWindowsF);
-			mImageFetcher.loadImage(
-					getString(R.string.manual_door_and_windows_16),
-					manual_door_windows_f);
+			AQuery aq_daw_b = new AQuery(v);
+			aq_daw_b.id(R.id.imageViewManualDoorWindowsB).image(
+					getString(R.string.manual_door_and_windows_4));
+
+			AQuery aq_daw_c = new AQuery(v);
+			aq_daw_c.id(R.id.imageViewManualDoorWindowsC).image(
+					getString(R.string.manual_door_and_windows_8));
+
+			AQuery aq_daw_d = new AQuery(v);
+			aq_daw_d.id(R.id.imageViewManualDoorWindowsD).image(
+					getString(R.string.manual_door_and_windows_9));
+
+			AQuery aq_daw_e = new AQuery(v);
+			aq_daw_e.id(R.id.imageViewManualDoorWindowsE).image(
+					getString(R.string.manual_door_and_windows_14));
+
+			AQuery aq_daw_f = new AQuery(v);
+			aq_daw_f.id(R.id.imageViewManualDoorWindowsF).image(
+					getString(R.string.manual_door_and_windows_16));
 
 			break;
 

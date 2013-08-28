@@ -8,5 +8,5 @@
     <color name="techo_text">#07adec</color>
     <color name="abs_background">#f2f2f2</color>
     <color name="article_border">#e7e7e7</color>
-    <color name="article_title">#b4b5b4</color>
+    <color name="article_title">#333333</color>
 </resources>

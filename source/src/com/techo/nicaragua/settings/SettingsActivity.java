@@ -6,6 +6,7 @@ import com.techo.nicaragua.MainActivity;
 import com.techo.nicaragua.R;
 import com.techo.nicaragua.utils.HtmlReader;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Spanned;
 import android.view.View;
@@ -55,14 +56,26 @@ public class SettingsActivity extends SherlockFragmentActivity {
 
 			@Override
 			public void onClick(View arg0) {
-				// String LicenseInfo =
-				// GooglePlayServicesUtil.getOpenSourceSoftwareLicenseInfo(getApplicationContext());
-
+		
 				AlertDialog.Builder LicenseDialog = new AlertDialog.Builder(
 						SettingsActivity.this);
 				LicenseDialog.setTitle(getString(R.string.settings_contributors));
 				LicenseDialog.setMessage(Contributors);
 				LicenseDialog.show();
+			}
+
+		});
+		
+		LinearLayout linearLayoutFeedback = (LinearLayout) findViewById(R.id.linearLayoutFeedback);
+		linearLayoutFeedback.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+                emailIntent.setType("text/plain");
+                emailIntent.setData(Uri.parse("mailto:" + getString(R.string.settings_feedback_email)));
+                emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(emailIntent);
 			}
 
 		});

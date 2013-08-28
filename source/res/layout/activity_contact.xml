@@ -37,7 +37,8 @@
             android:paddingBottom="20dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:paddingTop="20dp" >
+            android:paddingTop="20dp"
+            android:gravity="center_vertical" >
             
             <ImageView 
                 android:layout_width="wrap_content"
@@ -64,7 +65,8 @@
             android:paddingBottom="20dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:paddingTop="20dp" >
+            android:paddingTop="20dp"
+            android:gravity="center_vertical" >
             
             <ImageView 
                 android:layout_width="wrap_content"
@@ -91,7 +93,8 @@
             android:paddingBottom="20dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
-            android:paddingTop="20dp" >
+            android:paddingTop="20dp"
+            android:gravity="center_vertical" >
             
             <ImageView 
                 android:layout_width="wrap_content"
@@ -102,6 +105,90 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/contact_address_ni_title"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        
+        <View style="@style/ViewSeparator" />
+        
+        <LinearLayout
+            android:id="@+id/linearLayoutNiFacebook"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_selector"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:gravity="center_vertical" >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_facebook"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facebook"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        
+        <View style="@style/ViewSeparator" />
+        
+        <LinearLayout
+            android:id="@+id/linearLayoutNiTwitter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_selector"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:gravity="center_vertical" >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_twitter"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/twitter"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        
+        <View style="@style/ViewSeparator" />
+        
+        <LinearLayout
+            android:id="@+id/linearLayoutNiYoutube"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_selector"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:gravity="center_vertical" >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_youtube"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/youtube"
                 android:textSize="22sp"
                 android:layout_marginLeft="10dp" />
         </LinearLayout>

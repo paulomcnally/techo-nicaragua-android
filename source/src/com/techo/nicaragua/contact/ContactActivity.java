@@ -59,6 +59,33 @@ public class ContactActivity extends SherlockFragmentActivity {
 					startActivity(locateIntent);
 			}
 		});
+		
+		LinearLayout linearLayoutNiFacebook = (LinearLayout) findViewById(R.id.linearLayoutNiFacebook);
+		linearLayoutNiFacebook.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {				
+				Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.social_network_url_facebook)));
+				startActivity(intent);
+			}
+		});
+		
+		LinearLayout linearLayoutNiTwitter = (LinearLayout) findViewById(R.id.linearLayoutNiTwitter);
+		linearLayoutNiTwitter.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {				
+				Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.social_network_url_twitter)));
+				startActivity(intent);
+			}
+		});
+		
+		LinearLayout linearLayoutNiYoutube = (LinearLayout) findViewById(R.id.linearLayoutNiYoutube);
+		linearLayoutNiYoutube.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {				
+				Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse(getString(R.string.social_network_url_youtube)));
+				startActivity(intent);
+			}
+		});
 	}
 
 	private void initActionBarSherlock() {

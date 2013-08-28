@@ -68,6 +68,27 @@
         </LinearLayout>
         
         <View style="@style/ViewSeparator" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFeedback"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_selector"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_feedback"
+                android:textSize="22sp" />
+        </LinearLayout>
+        
+        <View style="@style/ViewSeparator" />
     </LinearLayout>
 
 </ScrollView>
